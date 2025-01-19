@@ -6,6 +6,14 @@ import sklearn
 from sklearn.preprocessing import OrdinalEncoder, StandardScaler
 import pickle
 
+
+st.set_page_config(
+    page_title="Prediksi Kerusakan Mesin",  # Judul yang singkat
+    page_icon="🔧",  # Ikon di tab browser
+    layout="centered",  # Mengatur layout agar konten berada di tengah
+    initial_sidebar_state="auto"  # Sidebar otomatis
+)
+
 # Add custom CSS
 st.markdown("""
     <style>
@@ -133,12 +141,6 @@ def standardize_data(data, scaler=None):
 
     return data, scaler
     
-st.set_page_config(
-    page_title="Prediksi Kerusakan Mesin",  # Judul yang singkat
-    page_icon="🔧",  # Ikon di tab browser
-    layout="centered",  # Mengatur layout agar konten berada di tengah
-    initial_sidebar_state="auto"  # Sidebar otomatis
-)
 
 # Main function for the app
 def main():
